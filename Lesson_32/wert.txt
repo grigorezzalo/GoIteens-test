@@ -1,0 +1,21 @@
+from new_culc import do_sum, do_difference, do_mul, do_div
+
+a = float(input("Input the first number "))  # начинаем отсюда
+b = float(input("Input the second number "))
+operation = input("Choose the operation, please: +, -, /, * ")
+if operation == "+":
+    print("a + b = ", do_sum(a, b))
+
+elif operation == "-":
+    print("a - b = ", do_difference(a, b))
+
+elif operation == "*":
+    print("a * b = ", do_mul(a, b))
+
+elif operation == "/":
+    if b == 0:
+        print("Error")
+    else:
+        print("a / b = ", do_div(a ,b))
+else:
+    print("Error")   # здесь пишем, что такого действия не существует
